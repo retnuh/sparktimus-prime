@@ -25,6 +25,7 @@
   
   :jvm-opts ^:replace ["-server" "-Xmx2g"]
   :main sparktimus-prime.core
+  :uberjar-merge-with {#"reference\.conf$" [slurp str spit]}
   :target-path "target/%s"
   :profiles {:dev {:repl-options {:init-ns user}
                    :source-paths ["dev"]
